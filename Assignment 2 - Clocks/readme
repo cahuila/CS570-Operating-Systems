@@ -1,0 +1,45 @@
+Author: Ian Chang masc0962
+        Jack Aguirre masc0976
+
+Date: 6//20/2013
+Class: CS570, Summer 2013
+Assignment Information: Assignment #2, page replacement 
+Filename: readme
+
+File manifest: clock.h, lru.cpp, main.cpp, opt.h, readme, clock.cpp, code.h,
+	       lru.h,  opt.cpp, pages.txt, readme, makefile
+	       
+Compile instructions: type make in directory A2
+	       
+Design decisions: We decided to code in c++ for this assignment since we coded
+                  in c in the first assignment. We implemented opt with array
+		  because it is easier to store and look ahead. We implemented 
+		  lru with linked list because it is easier to keep the pages in
+		  order, so we can remove the least recent used page with ease. 
+		  We implemented clock with a circular array so it is easier to 
+		  set the use bit, and move the index.
+		  
+Lesson learned: opt page algorithm, lru algorithm, clock algorithm, teamwork
+
+Program run: 
+	Page1: 12 pages
+	with framsize 3: OPT has 6 faults
+			 LRU has 7 faults
+			 clock has 8 faults
+			 
+	with framsize 5: OPT has 5 faults
+	     		 LRU has 5 faults
+			 clock has 5 faults
+	        
+	Page2: 37 pages 
+	with framesize 3: OPT has 26 Faults
+			  LRU has 34 Faults
+			  clock has 34 Faults
+			 
+	with framesize 5: OPT has 19 Faults
+			  LRU has 28 Faults
+			  clock has 29 Faults
+			  
+			  
+So our conclusion is the LRU is the closest to the the benchmark OPT. The larger
+number of pages decreased the faults seen in LRU.
